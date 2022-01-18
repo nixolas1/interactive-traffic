@@ -176,10 +176,11 @@ export const getData = (callback) => {
         try {
             const source = global.options.source
             const hash = window.location.hash.substr(1);
-            const param = hash === "all" ? "?agency=" + hash : "";
+            const param = (hash === "all" ? "all" : "ruter") + ".json";
             global.stops = await ky.get(source.baseUrl + source.stopUrl + param, {timeout: 70000}).json();
+            console.log("Got stops")
             global.journeyData = await ky.get(source.baseUrl + source.journeyUrl + param, {timeout: 70000}).json();
-
+            console.log("Got Journeys")
             global.renderer.domElement.classList.add("fadein")
 
             try {

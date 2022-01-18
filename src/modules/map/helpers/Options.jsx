@@ -19,7 +19,7 @@ const initOptions = () => {
 
     global.options = {
         source: {
-            baseUrl: window.location.hostname !== "localhost" ? "/" : "http://localhost:3000/",
+            baseUrl: "/data/",
             journeyUrl: "journeys",
             stopUrl: "stops",
         },
