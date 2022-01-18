@@ -1,0 +1,25 @@
+//@import "/resources/styles/helpers"
+
+.ri-module-selector {
+    display: flex;
+
+
+    &__item {
+        border-top: 1px solid;
+        flex: 1;
+
+        & + & {
+            border-left: 1px solid;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 2rem 1rem;
+        text-align: center;
+
+        &.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+}

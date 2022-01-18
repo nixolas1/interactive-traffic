@@ -1,0 +1,47 @@
+.ri-overlay {
+    position: absolute;
+    top: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "DIN", monospace;
+    margin: 2rem;
+}
+
+.ri-time {
+    font-size: 3.85rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.ri-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    opacity: 0.85;
+
+    &__text {
+        font-weight: 400;
+        font-family: "DIN", monospace;
+        margin-top: 2rem;
+    }
+}
+
+.fadein {
+    animation: fadein 3s ease-out;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

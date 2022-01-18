@@ -1,0 +1,3 @@
+@function white($transparency) {
+    @return rgba(255, 255, 255, $transparency)
+}

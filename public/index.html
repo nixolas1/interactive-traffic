@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <title>Interactive Traffic Norway</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <div id="overlay" class="ri-overlay">
+            <div id="time" class="ri-time" onclick="window.toggleGui()"></div>
+            <div id="error" class="ri-error"></div>
+        </div>
+        <div id="loading" class="ri-loading" style="color: white;">
+            <div class="rds-splash-animation rds-splash-animation--large rds-splash-animation--red"><span class="rds-splash-animation__line rds-splash-animation__line--left"></span><span class="rds-splash-animation__line rds-splash-animation__line--top"></span><span class="rds-splash-animation__line rds-splash-animation__line--right"></span><span class="rds-splash-animation__line rds-splash-animation__line--bottom"></span></div>
+            <h2 class="ri-loading__text">Henter busser, båter, trikker, t-baner, tog, fly...</h2>
+        </div>
+        <script>
+            window.onerror = function(e) {
+                document.getElementById("error").innerText = JSON.stringify(e);
+            }
+        </script>
+    </body>
+</html>
